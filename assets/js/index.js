@@ -8,12 +8,23 @@ function main() {
     const openVideo = document.querySelector("[data-open-video]")
     const closeVideo = document.querySelector("[data-close-video]")
     const modal = document.querySelector("[data-popup]")
+
+    const iframePlayer = document.getElementById("popup-player")
+    const modalPlayerSrc = iframePlayer.src
+
     openVideo.addEventListener("click", () => {
-        modal.classList.remove("hidden")
+        if (iframePlayer.src !== modalPlayerSrc)
+            iframePlayer.src = modalPlayerSrc
+        modal.classList.toggle("hidden")
+        document.body.classList.toggle("is_hidden")
     })
 
     closeVideo.addEventListener("click", () => {
-        modal.classList.add("hidden")
+        // Reload iframe
+        iframePlayer.src = ""
+        // console.log();
+        modal.classList.toggle("hidden")
+        document.body.classList.toggle("is_hidden")
     }, true)
 
     window.addEventListener('resize', fixViewHeight)
