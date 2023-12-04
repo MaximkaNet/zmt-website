@@ -27,20 +27,50 @@
 }
 
 .show-video-btn {
+    cursor: pointer;
+    border: 2px solid white;
     color: white;
     padding: 15px;
-    border: 2px solid white;
-    text-decoration: none;
     font-size: 18px;
     border-radius: 10px;
+    /* Transitions */
     transition: .3s;
+    transition: color .4s;
+    /* Background */
+    background-image: linear-gradient(0deg, #ffffff 0%, #ffffff 100%);
+    background-position: 0 58px;
+    background-repeat: no-repeat;
+    /* Animation */
+    animation: move-out 0.4s;
+}
+
+.show-video-btn:hover span {
+    color: black;
+    transition: color .4s;
 }
 
 .show-video-btn:hover {
-    color: white;
-    box-shadow: 0 0 17px 0px #858585;
-    transition: .3s;
-    cursor: pointer;
+    animation: move-in 0.4s forwards;
+}
+
+@keyframes move-in {
+    0% {
+        background-position: 0 58px;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+@keyframes move-out {
+    0% {
+        background-position: 0 0px;
+    }
+
+    to {
+        background-position: 0 -58px;
+    }
 }
 
 .bottom-left>h1 {
@@ -78,34 +108,41 @@ video {
     display: block;
     position: absolute;
     width: 2px;
-    height: 100px;
+    height: 80px;
+    transform: scaleY(0%);
     background-color: rgb(255, 255, 255);
-    /* rotate: 90deg; */
     left: 50%;
-    top: calc(var(--view-height) - 150px);
-    animation: scrollme-animation 5s ease-out infinite;
+    top: calc(var(--view-height) - 250px);
+    animation: scrollme-animation 3s cubic-bezier(1.000, 0.005, 0.495, 1.010) infinite;
     transform-origin: center bottom;
-    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
 }
 
 @keyframes scrollme-animation {
     0% {
-        transform: translateY(0);
+        opacity: 0;
+    }
+
+    5% {
+        transform: scaleY(0);
         opacity: 1;
     }
 
     50% {
-        transform: translateY(20px);
-        opacity: 0;
+        transform: scaleY(-100%);
     }
 
     100% {
-        transform: translateY(0px);
-        opacity: 1;
+        transform: scaleY(-100%) translateY(-100%);
+        opacity: 0;
     }
 }
 
 @media only screen and (max-width: 768px) {
+    .show-video-btn {
+        padding: 15px;
+        font-size: 16px;
+    }
+
     .bottom-left>h1 {
         font-size: 24pt;
     }
