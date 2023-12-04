@@ -27,7 +27,7 @@ function main() {
         document.body.classList.toggle("is_hidden")
     }, true)
 
-    window.addEventListener('resize', fixViewHeight)
+    // window.addEventListener('resize', fixViewHeight)
     window.addEventListener("DOMContentLoaded", fixViewHeight)
 }
 
