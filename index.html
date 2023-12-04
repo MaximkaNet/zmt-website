@@ -33,8 +33,8 @@
         <div class="intro-inner-container">
             <div class="bottom-left">
                 <h1>Základy multimediální tvorby</h1>
-                <a href="https://youtu.be/Ml5Hw6mp7cY?si=4JAEEj268s6t-tO8" target="_blank"
-                    class="show-video-btn">Přehrat cele</a>
+                <!-- <a href="https://youtu.be/Ml5Hw6mp7cY?si=4JAEEj268s6t-tO8"></a> -->
+                <span class="show-video-btn" data-open-video>Přehrat video</span>
             </div>
             <hr class="scrollme">
         </div>
@@ -90,8 +90,15 @@
         <span>Maksym Zavada, Serhii Kruhliak</span>
         <span>2023</span>
     </footer>
-    <div class="popup">
-        <!-- Content -->
+    <div data-popup class="popup hidden">
+        <div class="overlay"></div>
+        <div class="popup-body">
+            <button data-close-video>Close</button>
+            <iframe class="yt-video" src="https://www.youtube.com/embed/Ml5Hw6mp7cY?si=kJmxj1pHk2cCAG6S"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </div>
     </div>
     <script src="assets/js/index.js"></script>
 </body>

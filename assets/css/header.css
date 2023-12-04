@@ -40,6 +40,7 @@
     color: white;
     box-shadow: 0 0 17px 0px #858585;
     transition: .3s;
+    cursor: pointer;
 }
 
 .bottom-left>h1 {

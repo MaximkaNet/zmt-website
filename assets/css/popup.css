@@ -1,0 +1,53 @@
+.popup {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--view-height);
+    background-color: rgb(51, 51, 51);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #00000057;
+}
+
+.popup-body {
+    z-index: 999;
+    position: relative;
+    max-width: 1000px;
+    height: var(--view-height);
+    padding: 150px 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+button[data-close-video] {
+    z-index: 999;
+    padding: 10px;
+    max-width: max-content;
+    margin-bottom: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+button[data-close-video]:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.yt-video {
+    width: 100%;
+    height: 100%;
+}
+
+.hidden {
+    display: none;
+}
