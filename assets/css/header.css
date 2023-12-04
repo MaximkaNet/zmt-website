@@ -103,6 +103,10 @@ video {
 }
 
 @media only screen and (max-width: 768px) {
+    .bottom-left>h1 {
+        font-size: 24pt;
+    }
+
     .bottom-left {
         width: 100%;
     }

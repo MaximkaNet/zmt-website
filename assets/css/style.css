@@ -121,10 +121,6 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
-    .bottom-left>h1 {
-        font-size: 28pt;
-    }
-
     .content-row>ul {
         width: 100%;
         margin-right: auto;
