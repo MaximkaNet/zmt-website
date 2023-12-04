@@ -4,7 +4,8 @@
     margin: 0;
     padding: 0;
     border: none;
-    font-family: 'Calibri';
+    font-family: 'Inter', sans-serif;
+    font-family: 'Hedvig Letters Sans', sans-serif;
     box-sizing: border-box;
 }
 
@@ -109,7 +110,7 @@ section>h1 {
 
 footer {
     width: 100%;
-    padding: 15px 0;
+    padding: 25px 0;
     text-align: center;
     background-color: black;
     color: white;
@@ -119,9 +120,15 @@ footer {
     gap: 10px;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 768px) {
+    .bottom-left>h1 {
+        font-size: 28pt;
+    }
+
     .content-row>ul {
         width: 100%;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     .content-row {
