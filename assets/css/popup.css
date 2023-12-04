@@ -15,32 +15,44 @@
     background-color: #00000057;
 }
 
+.popup-title {
+    text-align: center;
+    color: white;
+}
+
 .popup-body {
     z-index: 999;
     position: relative;
     max-width: 1000px;
     height: var(--view-height);
-    padding: 150px 0;
+    padding: 150px 20px;
     margin: 0 auto;
+}
+
+.popup .actions {
+    width: 100%;
+    margin-bottom: 10px;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
+    justify-content: space-between;
 }
 
 button[data-close-video] {
     z-index: 999;
     padding: 10px;
     max-width: max-content;
-    margin-bottom: 10px;
+    margin-right: 0;
     background: none;
     border: none;
-    color: white;
+    color: #a3a3a3;
     font-weight: bold;
+    transition: color .3s;
 }
 
 button[data-close-video]:hover {
-    text-decoration: underline;
     cursor: pointer;
+    color: #bebebe;
+    transition: color .2s;
 }
 
 .yt-video {
