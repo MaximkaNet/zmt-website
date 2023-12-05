@@ -77,3 +77,19 @@ button[data-close-video]:hover {
 .hidden {
     display: none;
 }
+
+@media only screen and (max-width: 768px) {
+    .popup-body {
+        height: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+@media only screen and (max-height: 525px) {
+    .popup-body {
+        height: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
