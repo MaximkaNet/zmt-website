@@ -22,12 +22,11 @@ function main() {
     closeVideo.addEventListener("click", () => {
         // Reload iframe
         iframePlayer.src = ""
-        // console.log();
         modal.classList.toggle("hidden")
         document.body.classList.toggle("is_hidden")
     }, true)
 
-    // window.addEventListener('resize', fixViewHeight)
+    window.addEventListener("orientationchange", fixViewHeight)
     window.addEventListener("DOMContentLoaded", fixViewHeight)
 }
 
